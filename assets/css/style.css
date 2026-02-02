@@ -2,14 +2,14 @@
 
 /* ====== CSS Variables & Theme ====== */
 :root {
-    /* Main Hues - Bright & Premium */
-    --primary: #0056b3;
-    /* Logo Blue - Corporate */
-    --primary-dark: #003d80;
-    --secondary: #FFD600;
-    /* Electric Yellow/Gold */
-    --accent: #00E5FF;
-    /* Cyan Neon */
+    /* Main Hues - Matching Logo Colors */
+    --primary: #0047AB;
+    /* Logo Dark Blue */
+    --primary-dark: #003380;
+    --secondary: #00BCD4;
+    /* Logo Cyan/Turquoise */
+    --accent: #40E0D0;
+    /* Light Turquoise Accent */
 
     /* Neturals */
     --dark-bg: #0B1120;
@@ -23,8 +23,8 @@
     /* Effects */
     --glass: rgba(11, 17, 32, 0.7);
     --glass-border: 1px solid rgba(255, 255, 255, 0.05);
-    --glow-primary: 0 0 20px rgba(41, 98, 255, 0.5);
-    --glow-accent: 0 0 15px rgba(0, 229, 255, 0.6);
+    --glow-primary: 0 0 20px rgba(0, 71, 171, 0.5);
+    --glow-accent: 0 0 15px rgba(0, 188, 212, 0.6);
 
     /* Layout */
     --container: 1200px;
@@ -127,9 +127,9 @@ h2::after {
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, #0066CC 100%);
     color: white;
-    box-shadow: 0 4px 15px rgba(41, 98, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 71, 171, 0.4);
 }
 
 .btn-primary::before {
@@ -139,7 +139,7 @@ h2::after {
     left: 0;
     width: 0%;
     height: 100%;
-    background: var(--secondary);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
     z-index: -1;
     transition: width 0.3s var(--ease-out);
 }
@@ -149,8 +149,8 @@ h2::after {
 }
 
 .btn-primary:hover {
-    color: var(--dark-bg);
-    box-shadow: 0 4px 20px rgba(255, 214, 0, 0.5);
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 188, 212, 0.5);
 }
 
 /* ====== Navbar ====== */
@@ -499,7 +499,7 @@ section {
     border-radius: 50%;
     font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 214, 0, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.4);
     z-index: 999;
     opacity: 0;
     visibility: hidden;
@@ -518,7 +518,7 @@ section {
 
 #back-to-top:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(255, 214, 0, 0.6);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.6);
 }
 
 /* Preloader */
@@ -596,7 +596,7 @@ section {
 .product-card-home:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    border-color: rgba(41, 98, 255, 0.2);
+    border-color: rgba(0, 188, 212, 0.3);
 }
 
 .product-icon {
@@ -615,7 +615,7 @@ section {
 
 .product-card-home:hover .product-icon {
     transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 10px 30px rgba(41, 98, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.4);
 }
 
 .product-card-home h3 {
@@ -722,14 +722,14 @@ section {
 .why-card:hover {
     background: rgba(255, 255, 255, 0.05);
     transform: translateY(-5px);
-    border-color: rgba(255, 214, 0, 0.2);
+    border-color: rgba(0, 188, 212, 0.3);
 }
 
 .why-icon {
     width: 70px;
     height: 70px;
     margin: 0 auto 20px;
-    background: rgba(255, 214, 0, 0.1);
+    background: rgba(0, 188, 212, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -783,14 +783,14 @@ section {
     top: 20px;
     right: 30px;
     font-size: 6rem;
-    color: rgba(255, 214, 0, 0.1);
+    color: rgba(0, 188, 212, 0.15);
     font-family: Georgia, serif;
     line-height: 1;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(41, 98, 255, 0.2);
+    border-color: rgba(0, 188, 212, 0.3);
 }
 
 .testimonial-stars {
@@ -842,7 +842,7 @@ section {
 
 /* ====== CTA Section ====== */
 .cta-section {
-    background: linear-gradient(135deg, rgba(11, 17, 32, 0.95) 0%, rgba(41, 98, 255, 0.2) 100%), url('assets/images/cta-bg.jpg');
+    background: linear-gradient(135deg, rgba(11, 17, 32, 0.95) 0%, rgba(0, 71, 171, 0.2) 100%), url('assets/images/cta-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -912,7 +912,7 @@ html {
     background: rgba(255, 255, 255, 0.08);
     border-color: var(--secondary);
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(255, 214, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
 }
 
 .client-logo-box span {
