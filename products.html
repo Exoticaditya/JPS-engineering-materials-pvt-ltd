@@ -44,20 +44,42 @@
 
         .product-img {
             height: 250px;
-            background: #2a2a2a;
-            /* Placeholder */
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             color: rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .product-img img {
+            transition: transform 0.4s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
         }
 
         .product-content {
             padding: 25px;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: var(--secondary);
+            color: var(--dark-bg);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         .product-title {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: white;
             margin-bottom: 10px;
         }
@@ -65,7 +87,15 @@
         .product-desc {
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .product-price {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 15px;
         }
 
         .product-link {
@@ -78,6 +108,24 @@
 
         .product-link:hover {
             gap: 12px;
+        }
+
+        .filter-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--secondary);
+            color: var(--dark-bg);
+            border-color: var(--secondary);
         }
     </style>
 </head>
@@ -129,7 +177,7 @@
         </div>
     </header>
 
-    <!-- Product Grid -->
+    <!-- Products Grid -->
     <section>
         <div class="container">
             <div class="section-header">
@@ -137,91 +185,215 @@
                 <h2>Material Solutions</h2>
             </div>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
-                <!-- Product 1 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="product-img">
-                        <i class="fa-solid fa-cube" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Cast Nylon (PA 6G)</h3>
-                        <p class="product-desc">Superior wear resistance, high mechanical strength, and excellent
-                            chemical resistance. Ideal for gears, rollers, and bearings.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="product-img">
-                        <i class="fa-solid fa-layer-group" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">POM (Polyacetal)</h3>
-                        <p class="product-desc">High dimensional stability and low friction. Perfect for precision parts
-                            requiring high stiffness and low moisture absorption.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="product-img">
-                        <i class="fa-solid fa-shield-halved" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">PEEK</h3>
-                        <p class="product-desc">Ultra-high performance plastic with exceptional thermal resistance (up
-                            to 250°C) and mechanical strength.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="product-img">
-                        <i class="fa-solid fa-star" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">PTFE (Teflon)</h3>
-                        <p class="product-desc">Known for its non-stick properties and high chemical resistance. Used
-                            widely in seals, gaskets, and insulators.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Product 5 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="product-img">
-                        <i class="fa-solid fa-circle-notch" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Polyurethane (PU)</h3>
-                        <p class="product-desc">Combines the durability of metal with the elasticity of rubber.
-                            Outstanding abrasion and impact resistance.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <!-- Product 6 -->
-                <div class="product-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="product-img">
-                        <i class="fa-solid fa-gears" style="font-size: 4rem;"></i>
-                    </div>
-                    <div class="product-content">
-                        <h3 class="product-title">Machined Components</h3>
-                        <p class="product-desc">Custom machined parts as per drawing. We provide turning, milling, and
-                            fabrication services.</p>
-                        <a href="contact.html" class="product-link">Enquire Now <i
-                                class="fa-solid fa-arrow-right"></i></a>
-                    </div>
-                </div>
+            <!-- Classification Tabs -->
+            <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 50px; flex-wrap: wrap;">
+                <button class="filter-btn active" data-filter="all">All Products</button>
+                <button class="filter-btn" data-filter="nylon">Nylon Parts</button>
+                <button class="filter-btn" data-filter="plastic">Plastic Parts</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
             </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+
+                <!-- Product 1: Nylon Machine Gear -->
+                <div class="product-card" data-aos="fade-up" data-category="nylon">
+                    <div class="product-img">
+                        <img src="assets/images/products/nylon-machine-gear.jpeg" alt="Nylon Machine Gear"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-gear\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-badge">Best Seller</span>
+                        <h3 class="product-title">Nylon Machine Gear</h3>
+                        <p class="product-desc">High-strength, wear-resistant nylon gears for printing machines. Fine finish, accurate dimensions, 12+ teeth options.</p>
+                        <div class="product-price">₹300 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 2: Nylon Base Plate -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="nylon">
+                    <div class="product-img">
+                        <img src="assets/images/products/nylon-base-plate.jpg" alt="Nylon Machine Base Plate"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-layer-group\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Nylon Machine Base Plate</h3>
+                        <p class="product-desc">Precision base plates for industrial machines. Available in 20-100mm sizes with smooth finish.</p>
+                        <div class="product-price">₹800 / Unit onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 3: Nylon Gears Machine -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="nylon">
+                    <div class="product-img">
+                        <img src="assets/images/products/nylon-gears.jpeg" alt="Nylon Gears Machine"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-cogs\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Nylon Gears Machine</h3>
+                        <p class="product-desc">Complete nylon gear assemblies for printing applications. Made in India with supreme grade materials.</p>
+                        <div class="product-price">Contact for Price</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Plastic Machine Parts -->
+                <div class="product-card" data-aos="fade-up" data-category="plastic">
+                    <div class="product-img">
+                        <img src="assets/images/products/plastic-machine-parts.jpg" alt="Plastic Machine Parts"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-cubes\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-badge">Popular</span>
+                        <h3 class="product-title">Plastic Machine Parts</h3>
+                        <p class="product-desc">Custom plastic components for industrial, household & commercial applications. Rugged design, smooth surface.</p>
+                        <div class="product-price">₹300 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 5: Plastic Sprocket -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="plastic">
+                    <div class="product-img">
+                        <img src="assets/images/products/plastic-sprocket.jpg" alt="Plastic Machine Sprocket"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-dharmachakra\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Plastic Machine Sprocket</h3>
+                        <p class="product-desc">Industrial plastic sprockets with 19 teeth. Paint coated finish, robust construction for machinery.</p>
+                        <div class="product-price">₹2,000 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 6: Plastic Bushes -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="plastic">
+                    <div class="product-img">
+                        <img src="assets/images/products/plastic-bushes.png" alt="Industrial Plastic Component Bush"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-ring\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Industrial Plastic Bushes</h3>
+                        <p class="product-desc">Self-lubricating cylindrical bushes for equipment & machines. Black/white colors, 5-20mm lengths.</p>
+                        <div class="product-price">Contact for Price</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 7: Jigs & Fixtures -->
+                <div class="product-card" data-aos="fade-up" data-category="industrial">
+                    <div class="product-img">
+                        <img src="assets/images/products/jig-fixtures.png" alt="Jigs And Fixtures"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-toolbox\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-badge">Industrial</span>
+                        <h3 class="product-title">Jigs & Fixtures</h3>
+                        <p class="product-desc">SS broaching jigs with 58-60 HRC hardness. Used for welding, machining, metal bending operations.</p>
+                        <div class="product-price">₹4,000 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 8: Robotics Painting Jig -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="industrial">
+                    <div class="product-img">
+                        <img src="assets/images/products/painting-jig-fixtures.jpg" alt="Robotics Painting Jig Fixtures"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-robot\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Robotics Painting Jigs</h3>
+                        <p class="product-desc">Aluminium painting jig fixtures for automated assembly lines. 80 HRC hardness, 200-350mm sizes.</p>
+                        <div class="product-price">₹2,000 / Unit onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 9: Ropeway Trolley -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="industrial">
+                    <div class="product-img">
+                        <img src="assets/images/products/ropeway-trolley.png" alt="Ropeway Udan Khatola Trolley"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-cable-car\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-badge">Pan India Service</span>
+                        <h3 class="product-title">Ropeway Udan Khatola Trolley</h3>
+                        <p class="product-desc">Complete Udan Khatola trolley systems with customer support. Available in any color configuration.</p>
+                        <div class="product-price">₹40,000 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 10: Cabin Ropeway -->
+                <div class="product-card" data-aos="fade-up" data-category="industrial">
+                    <div class="product-img">
+                        <img src="assets/images/products/ropeway-cabin.png" alt="Indian Cabin Ropeway"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-mountain\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Indian Cabin Ropeway</h3>
+                        <p class="product-desc">Complete cabin ropeway maintenance with mechanical & electrical support. Made in India quality.</p>
+                        <div class="product-price">₹1,00,000 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 11: PEEK Sheet -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100" data-category="industrial">
+                    <div class="product-img">
+                        <img src="assets/images/products/peek-sheet.jpg" alt="PEEK Sheet And Rod"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-square\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <span class="product-badge">High Performance</span>
+                        <h3 class="product-title">PEEK Sheet & Rod</h3>
+                        <p class="product-desc">Polyetheretherketone (PEEK) sheets with outstanding mechanical & chemical resistance. 2-10mm thickness.</p>
+                        <div class="product-price">₹9,500 / Kg onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 12: UHMW PE Seal -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200" data-category="nylon plastic">
+                    <div class="product-img">
+                        <img src="assets/images/products/uhmw-pe-seal.jpeg" alt="UHMW PE Pistol Seal"
+                            style="width: 100%; height: 100%; object-fit: cover;"
+                            onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-circle-notch\' style=\'font-size: 4rem; color: rgba(255,255,255,0.1);\'></i>'">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">UHMW PE Pistol Seal</h3>
+                        <p class="product-desc">SS/UHMW PE seals for industrial applications. Coated surface, SS 304 grade with non-armoured design.</p>
+                        <div class="product-price">₹600 / Piece onwards</div>
+                        <a href="contact.html" class="product-link">Get Quote <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 80px 0;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; margin-bottom: 20px;" data-aos="fade-up">Need Custom Components?</h2>
+            <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 30px;" data-aos="fade-up" data-aos-delay="100">
+                We specialize in custom machining and fabrication. Share your requirements and get a tailored solution.
+            </p>
+            <a href="contact.html" class="btn" style="background: var(--secondary); color: var(--dark-bg);" data-aos="fade-up" data-aos-delay="200">
+                Request Custom Quote
+            </a>
         </div>
     </section>
 
@@ -258,7 +430,8 @@
             </div>
             <div
                 style="text-align: center; color: var(--text-muted); font-size: 0.8em; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
-                &copy; 2026 JPS Engineering Material Pvt Ltd. All Rights Reserved.
+                <p>&copy; 2025 JPS Engineering Material Pvt Ltd. All Rights Reserved.</p>
+                <p style="margin-top: 10px;">Designed and Developed by <a href="https://garvikadvertising.com" target="_blank" style="color: var(--secondary); text-decoration: none; font-weight: 500;">Garvik India</a></p>
             </div>
         </div>
     </footer>
