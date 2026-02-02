@@ -3,9 +3,9 @@
 /* ====== CSS Variables & Theme ====== */
 :root {
     /* Main Hues - Bright & Premium */
-    --primary: #2962FF;
-    /* Vivid Blue */
-    --primary-dark: #0039Cb;
+    --primary: #0056b3;
+    /* Logo Blue - Corporate */
+    --primary-dark: #003d80;
     --secondary: #FFD600;
     /* Electric Yellow/Gold */
     --accent: #00E5FF;
