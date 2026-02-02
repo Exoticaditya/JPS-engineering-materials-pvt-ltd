@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | JPS Engineering Material Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- GLightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, rgba(11, 17, 32, 0.95) 0%, rgba(41, 98, 255, 0.1) 100%), url('assets/images/gallery-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin-top: -80px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: var(--glass-border);
+            cursor: pointer;
+            group: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 17, 32, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .zoom-icon {
+            color: white;
+            font-size: 2rem;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .zoom-icon {
+            transform: scale(1);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            border: var(--glass-border);
+            background: #000;
+        }
+
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-layer-group" style="color: var(--secondary);"></i>
+                JPS <span>ENGINEERING</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="products.html" class="nav-link">Our Products</a></li>
+                <li><a href="applications.html" class="nav-link">Applications</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link active">More <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-down">Media Gallery</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 20px auto;" data-aos="fade-up">A visual tour
+                of our innovative manufacturing facility and products.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section>
+        <div class="container">
+
+            <!-- Video Section -->
+            <div style="margin-bottom: 80px;" data-aos="fade-up">
+                <div class="section-header" style="text-align: left;">
+                    <p>Featured Video</p>
+                    <h2>Inside Our Facility</h2>
+                </div>
+                <div class="video-wrapper">
+                    <video controls poster="assets/images/video-poster.jpg">
+                        <source src="assets/videos/JPS-engineering-vieo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="section-header">
+                <p>Portfolio</p>
+                <h2>Product Showcase</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <a href="https://via.placeholder.com/800x600?text=Product+1" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Product+1" alt="Gallery Image 1">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 2 -->
+                <a href="https://via.placeholder.com/800x600?text=Product+2" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Product+2" alt="Gallery Image 2">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 3 -->
+                <a href="https://via.placeholder.com/800x600?text=Product+3" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Product+3" alt="Gallery Image 3">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 4 -->
+                <a href="https://via.placeholder.com/800x600?text=Machinery" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Machinery" alt="Machinery">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 5 -->
+                <a href="https://via.placeholder.com/800x600?text=Factory" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Factory" alt="Factory Floor">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+                <!-- Gallery Item 6 -->
+                <a href="https://via.placeholder.com/800x600?text=Team" class="gallery-item glightbox">
+                    <img src="https://via.placeholder.com/400x300?text=Team" alt="Our Team">
+                    <div class="gallery-overlay">
+                        <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #050a14; padding: 60px 0 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                        JPS <span>ENGINEERING</span>
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9em;">
+                        Your trusted partner for high-quality engineering materials and components.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="about.html" style="color: var(--text-muted);">About Us</a></li>
+                        <li><a href="products.html" style="color: var(--text-muted);">Products</a></li>
+                        <li><a href="gallery.html" style="color: var(--text-muted);">Gallery</a></li>
+                        <li><a href="contact.html" style="color: var(--text-muted);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Contact</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-location-dot"
+                            style="width: 20px; color: var(--secondary);"></i> Greater Noida, UP, India</p>
+                    <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-phone"
+                            style="width: 20px; color: var(--secondary);"></i> +91-9810183265</p>
+                    <p style="color: var(--text-muted);"><i class="fa-solid fa-envelope"
+                            style="width: 20px; color: var(--secondary);"></i> info@vamcan.com</p>
+                </div>
+            </div>
+            <div
+                style="text-align: center; color: var(--text-muted); font-size: 0.8em; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+                &copy; 2026 JPS Engineering Material Pvt Ltd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        AOS.init({ duration: 800, offset: 100, once: true });
+
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(11, 17, 32, 0.95)';
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(11, 17, 32, 0.85)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

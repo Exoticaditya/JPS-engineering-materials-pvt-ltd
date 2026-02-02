@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | JPS Engineering Material Pvt Ltd</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, rgba(11, 17, 32, 0.95) 0%, rgba(41, 98, 255, 0.1) 100%), url('assets/images/products-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            margin-top: -80px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: var(--glass-border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--glow-primary);
+            border-color: rgba(41, 98, 255, 0.3);
+        }
+
+        .product-img {
+            height: 250px;
+            background: #2a2a2a;
+            /* Placeholder */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.1);
+        }
+
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .product-link {
+            color: var(--secondary);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-link:hover {
+            gap: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-layer-group" style="color: var(--secondary);"></i>
+                JPS <span>ENGINEERING</span>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="products.html" class="nav-link active">Our Products</a></li>
+                <li><a href="applications.html" class="nav-link">Applications</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">More <i class="fa-solid fa-chevron-down"
+                            style="font-size: 0.8em;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="certificates.html">Certificates</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <h1 data-aos="fade-down">Our Products</h1>
+            <p style="color: var(--text-muted); max-width: 600px; margin: 20px auto;" data-aos="fade-up">Explore our
+                comprehensive range of high-performance engineering materials.</p>
+        </div>
+    </header>
+
+    <!-- Product Grid -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <p>Catalogue</p>
+                <h2>Material Solutions</h2>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+                <!-- Product 1 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="product-img">
+                        <i class="fa-solid fa-cube" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Cast Nylon (PA 6G)</h3>
+                        <p class="product-desc">Superior wear resistance, high mechanical strength, and excellent
+                            chemical resistance. Ideal for gears, rollers, and bearings.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-img">
+                        <i class="fa-solid fa-layer-group" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">POM (Polyacetal)</h3>
+                        <p class="product-desc">High dimensional stability and low friction. Perfect for precision parts
+                            requiring high stiffness and low moisture absorption.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-img">
+                        <i class="fa-solid fa-shield-halved" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">PEEK</h3>
+                        <p class="product-desc">Ultra-high performance plastic with exceptional thermal resistance (up
+                            to 250°C) and mechanical strength.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-img">
+                        <i class="fa-solid fa-star" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">PTFE (Teflon)</h3>
+                        <p class="product-desc">Known for its non-stick properties and high chemical resistance. Used
+                            widely in seals, gaskets, and insulators.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-img">
+                        <i class="fa-solid fa-circle-notch" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Polyurethane (PU)</h3>
+                        <p class="product-desc">Combines the durability of metal with the elasticity of rubber.
+                            Outstanding abrasion and impact resistance.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-img">
+                        <i class="fa-solid fa-gears" style="font-size: 4rem;"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Machined Components</h3>
+                        <p class="product-desc">Custom machined parts as per drawing. We provide turning, milling, and
+                            fabrication services.</p>
+                        <a href="contact.html" class="product-link">Enquire Now <i
+                                class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #050a14; padding: 60px 0 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
+                <div>
+                    <a href="#" class="logo" style="margin-bottom: 20px; display: inline-block;">
+                        JPS <span>ENGINEERING</span>
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9em;">
+                        Your trusted partner for high-quality engineering materials and components.
+                    </p>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Quick Links</h4>
+                    <ul style="display: flex; flex-direction: column; gap: 10px;">
+                        <li><a href="about.html" style="color: var(--text-muted);">About Us</a></li>
+                        <li><a href="products.html" style="color: var(--text-muted);">Products</a></li>
+                        <li><a href="contact.html" style="color: var(--text-muted);">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: white; margin-bottom: 20px;">Contact</h4>
+                    <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-location-dot"
+                            style="width: 20px; color: var(--secondary);"></i> Greater Noida, UP, India</p>
+                    <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-phone"
+                            style="width: 20px; color: var(--secondary);"></i> +91-9810183265</p>
+                    <p style="color: var(--text-muted);"><i class="fa-solid fa-envelope"
+                            style="width: 20px; color: var(--secondary);"></i> info@vamcan.com</p>
+                </div>
+            </div>
+            <div
+                style="text-align: center; color: var(--text-muted); font-size: 0.8em; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+                &copy; 2026 JPS Engineering Material Pvt Ltd. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, offset: 100, once: true });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.background = 'rgba(11, 17, 32, 0.95)';
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.background = 'rgba(11, 17, 32, 0.85)';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
