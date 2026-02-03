@@ -463,8 +463,23 @@
                             style="width: 20px; color: var(--secondary);"></i> Greater Noida, UP, India</p>
                     <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-phone"
                             style="width: 20px; color: var(--secondary);"></i> +91-9810183265</p>
-                    <p style="color: var(--text-muted);"><i class="fa-solid fa-envelope"
+                    <p style="color: var(--text-muted); margin-bottom: 20px;"><i class="fa-solid fa-envelope"
                             style="width: 20px; color: var(--secondary);"></i> info@vamcan.com</p>
+                    <h4 style="color: white; margin-bottom: 15px; margin-top: 25px;">Follow Us</h4>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary); transition: all 0.3s ease;" onmouseover="this.style.background='var(--secondary)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--secondary)';">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary); transition: all 0.3s ease;" onmouseover="this.style.background='var(--secondary)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--secondary)';">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary); transition: all 0.3s ease;" onmouseover="this.style.background='var(--secondary)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--secondary)';">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--secondary); transition: all 0.3s ease;" onmouseover="this.style.background='var(--secondary)'; this.style.color='var(--dark-bg)';" onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--secondary)';">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div
@@ -477,9 +492,51 @@
 
     <!-- Scripts -->
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/919810183265" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/919810183265" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
+
+    <!-- Callback Request Button -->
+    <button class="callback-float" onclick="openCallbackModal()" title="Request Callback">
+        <i class="fa-solid fa-phone"></i>
+    </button>
+
+    <!-- Quick Quote Modal -->
+    <div id="quoteModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
+        <div style="background: var(--card-bg); border-radius: 20px; max-width: 500px; width: 90%; padding: 40px; position: relative; border: 1px solid rgba(255,255,255,0.1);">
+            <button onclick="closeQuoteModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-times"></i></button>
+            <h3 style="color: white; margin-bottom: 25px; text-align: center;">Request a Quote</h3>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name *" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <input type="email" placeholder="Your Email *" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <input type="tel" placeholder="Phone Number *" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <input type="text" placeholder="Product Name" style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <textarea placeholder="Requirements / Message *" required style="width: 100%; padding: 12px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit; min-height: 100px; resize: vertical;"></textarea>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Callback Modal -->
+    <div id="callbackModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
+        <div style="background: var(--card-bg); border-radius: 20px; max-width: 450px; width: 90%; padding: 40px; position: relative; border: 1px solid rgba(255,255,255,0.1);">
+            <button onclick="closeCallbackModal()" style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer;"><i class="fa-solid fa-times"></i></button>
+            <h3 style="color: white; margin-bottom: 10px; text-align: center;">Request a Callback</h3>
+            <p style="color: var(--text-muted); text-align: center; margin-bottom: 25px; font-size: 0.9rem;">We'll call you back within 30 minutes</p>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Your Name *" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <input type="tel" placeholder="Phone Number *" required style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
+                <select required style="width: 100%; padding: 12px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit; cursor: pointer;">
+                    <option value="">Preferred Time *</option>
+                    <option value="asap">ASAP</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                    <option value="evening">Evening (4 PM - 7 PM)</option>
+                </select>
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Request Callback</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Back to Top -->
     <button id="back-to-top" title="Back to Top">
@@ -493,6 +550,36 @@
             duration: 800,
             offset: 100,
             once: true
+        });
+
+        // Modal Functions
+        function openQuoteModal() {
+            document.getElementById('quoteModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeQuoteModal() {
+            document.getElementById('quoteModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openCallbackModal() {
+            document.getElementById('callbackModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCallbackModal() {
+            document.getElementById('callbackModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on outside click
+        document.getElementById('quoteModal').addEventListener('click', function(e) {
+            if (e.target === this) closeQuoteModal();
+        });
+
+        document.getElementById('callbackModal').addEventListener('click', function(e) {
+            if (e.target === this) closeCallbackModal();
         });
 
         // Mobile Menu Toggle
