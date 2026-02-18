@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-body bg-white text-secondary antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  @apply font-heading uppercase;
+}
+}
+
+@layer utilities {
+  .text-stroke-primary {
+    -webkit-text-stroke: 1px #FFB703;
+    color: transparent;
+  }
+
+  .clip-path-slant {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-secondary/10;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/80 hover:bg-primary;
+}
