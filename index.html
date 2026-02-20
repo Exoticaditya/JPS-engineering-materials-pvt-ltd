@@ -63,7 +63,7 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+91-9810183265",
+            "telephone": "+91-9811131910",
             "contactType": "sales",
             "availableLanguage": ["English", "Hindi"]
         },
@@ -589,7 +589,7 @@
                 <p>Get in touch with our engineering experts for a free consultation and quote.</p>
                 <div class="cta-buttons">
                     <a href="contact.html" class="btn btn-primary">Request a Quote</a>
-                    <a href="tel:+919810183265" class="btn" style="border: 2px solid white; background: transparent;"><i
+                    <a href="tel:+919811131910" class="btn" style="border: 2px solid white; background: transparent;"><i
                             class="fa-solid fa-phone" style="margin-right: 8px;"></i> Call Now</a>
                 </div>
             </div>
@@ -623,9 +623,9 @@
                     <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-location-dot"
                             style="width: 20px; color: var(--secondary);"></i> Greater Noida, UP, India</p>
                     <p style="color: var(--text-muted); margin-bottom: 10px;"><i class="fa-solid fa-phone"
-                            style="width: 20px; color: var(--secondary);"></i> +91-9810183265</p>
+                            style="width: 20px; color: var(--secondary);"></i> +91-9811131910</p>
                     <p style="color: var(--text-muted); margin-bottom: 20px;"><i class="fa-solid fa-envelope"
-                            style="width: 20px; color: var(--secondary);"></i> info@vamcan.com</p>
+                            style="width: 20px; color: var(--secondary);"></i> contact@jpsenggmaterials.com</p>
                     <h4 style="color: white; margin-bottom: 15px; margin-top: 25px;">Follow Us</h4>
                     <div style="display: flex; gap: 15px;">
                         <a href="#"
@@ -667,7 +667,7 @@
 
     <!-- Scripts -->
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/919810183265" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <a href="https://wa.me/919811131910" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -685,16 +685,21 @@
                 style="position: absolute; top: 15px; right: 15px; background: transparent; border: none; color: white; font-size: 1.5rem; cursor: pointer;"><i
                     class="fa-solid fa-times"></i></button>
             <h3 style="color: white; margin-bottom: 25px; text-align: center;">Request a Quote</h3>
-            <form action="#" method="POST">
-                <input type="text" placeholder="Your Name *" required
+            <form action="https://formsubmit.co/contact@jpsenggmaterials.com" method="POST">
+                <input type="hidden" name="_subject" value="New Website Quote Request">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="index.html">
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <input id="quote-name" name="name" type="text" placeholder="Your Name *" required
                     style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
-                <input type="email" placeholder="Your Email *" required
+                <input id="quote-email" name="email" type="email" placeholder="Your Email *" required
                     style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
-                <input type="tel" placeholder="Phone Number *" required
+                <input id="quote-phone" name="phone" type="tel" placeholder="Phone Number *" required
                     style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
-                <input type="text" placeholder="Product Name"
+                <input id="quote-product" name="product" type="text" placeholder="Product Name"
                     style="width: 100%; padding: 12px; margin-bottom: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit;">
-                <textarea placeholder="Requirements / Message *" required
+                <textarea id="quote-message" name="message" placeholder="Requirements / Message *" required
                     style="width: 100%; padding: 12px; margin-bottom: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; font-family: inherit; min-height: 100px; resize: vertical;"></textarea>
                 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">Send Enquiry</button>
             </form>
@@ -804,6 +809,7 @@
                 navbar.classList.remove('scrolled');
             }
         });
+        
     </script>
 </body>
 

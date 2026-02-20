@@ -43,11 +43,11 @@ const Navbar = () => {
                         </span>
                     </div>
                     <div className="flex gap-6">
-                        <a href="mailto:info@vamcan.com" className="hover:text-primary transition-colors flex items-center gap-2">
-                            <Mail size={12} className="text-primary" /> info@vamcan.com
+                        <a href="mailto:contact@jpsenggmaterials.com" className="hover:text-primary transition-colors flex items-center gap-2">
+                            <Mail size={12} className="text-primary" /> contact@jpsenggmaterials.com
                         </a>
-                        <a href="tel:+919810183265" className="hover:text-primary transition-colors flex items-center gap-2">
-                            <Phone size={12} className="text-primary" /> +91-9810183265
+                        <a href="tel:+919811131910" className="hover:text-primary transition-colors flex items-center gap-2">
+                            <Phone size={12} className="text-primary" /> +91-9811131910
                         </a>
                     </div>
                 </div>

@@ -31,7 +31,7 @@ const ContactFooter = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-heading font-bold text-lg mb-1">Email Us</h4>
-                                    <a href="mailto:info@vamcan.com" className="text-gray-400 text-sm hover:text-primary transition">info@vamcan.com</a>
+                                    <a href="mailto:contact@jpsenggmaterials.com" className="text-gray-400 text-sm hover:text-primary transition">contact@jpsenggmaterials.com</a>
                                 </div>
                             </div>
                             <div className="flex items-start gap-4">
@@ -40,7 +40,7 @@ const ContactFooter = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-heading font-bold text-lg mb-1">Call Us</h4>
-                                    <a href="tel:+919810183265" className="text-gray-400 text-sm hover:text-primary transition">+91-98101 83265</a>
+                                    <a href="tel:+919811131910" className="text-gray-400 text-sm hover:text-primary transition">+91-9811131910</a>
                                 </div>
                             </div>
                         </div>
